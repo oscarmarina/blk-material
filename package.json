@@ -1,0 +1,137 @@
+{
+  "name": "@blockqoute-playground/blk-material",
+  "version": "1.0.0-rc.1",
+  "description": "Webcomponent blk-material following open-wc recommendations",
+  "keywords": [
+    "lit",
+    "web-component",
+    "lit-element"
+  ],
+  "license": "MIT",
+  "author": "blk-material",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./src/BlkMaterial.js": {
+      "default": "./src/BlkMaterial.js"
+    },
+    "./define/blk-material.js": {
+      "default": "./define/blk-material.js"
+    },
+    "./index.js": {
+      "default": "./index.js"
+    },
+    "./src/styles/blk-material-styles.css.js": {
+      "default": "./src/styles/blk-material-styles.css.js"
+    }
+  },
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "/define/",
+    "/src/",
+    "index.js",
+    "!/**/*.scss"
+  ],
+  "scripts": {
+    "analyze": "cem analyze --litelement --globs \"{src,define}/**/*.{js,ts}\" \"index.js\"",
+    "build": "echo \"This is not a TypeScript project, so no need to build.\"",
+    "dev:vite": "vite build",
+    "format": "npm run format:eslint && npm run format:prettier && npm run format:stylelint",
+    "format:eslint": "eslint . --fix",
+    "format:prettier": "prettier \"**/*.{js,ts,json,html}\" --write --ignore-path .prettierignore",
+    "format:stylelint": "stylelint \"**/*.{scss,css}\" --fix --allow-empty-input --ignore-path .prettierignore",
+    "postinstall": "npm run sort:package",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier \"**/*.{js,ts,json,html}\" --check --ignore-path .prettierignore",
+    "lint:stylelint": "stylelint \"**/*.{scss,css}\" --allow-empty-input --ignore-path .prettierignore",
+    "prepare": "husky install",
+    "preview:vite": "vite preview",
+    "sass:watch": "sass-style-template",
+    "sort:package": "npx sort-package-json",
+    "start": "concurrently -k -r \"npm:sass:watch\" \"npm:vite\"",
+    "vite": "vite"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,html}": [
+      "npm run format:eslint"
+    ],
+    "**/*.{js,ts,json,html}": [
+      "npm run format:prettier"
+    ],
+    "**/*.{scss,css}": [
+      "npm run format:stylelint"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "printWidth": 108,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "overrides": [
+      {
+        "files": "*.{scss,css}",
+        "options": {
+          "printWidth": 280,
+          "singleQuote": false
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+      "custom-property-pattern": null,
+      "no-duplicate-selectors": null,
+      "color-function-notation": null,
+      "alpha-value-notation": null
+    }
+  },
+  "dependencies": {
+    "@blockquote-web-components/blockquote-controller-context-meta": "^1.0.0",
+    "@material/web": "^1.5.1",
+    "lit": "^3.1.4"
+  },
+  "devDependencies": {
+    "@blockquote-web-components/blockquote-base-style-helpers": "^1.0.0",
+    "@blockquote/cem-to-markdown-readme": "^1.0.0",
+    "@blockquote/coverage-table-reporter": "^1.2.0",
+    "@blockquote/rollup-plugin-externalize-source-dependencies": "^1.0.0",
+    "@blockquote/rollup-plugin-total-bundlesize": "^2.1.2",
+    "@blockquote/sass-style-template": "^3.0.3",
+    "@custom-elements-manifest/analyzer": "^0.10.2",
+    "@html-eslint/eslint-plugin": "^0.25.0",
+    "@html-eslint/parser": "^0.25.0",
+    "@open-wc/eslint-config": "^12.0.3",
+    "@stylistic/eslint-plugin": "^2.3.0",
+    "@types/mocha": "^10.0.7",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.7.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "playwright": "^1.45.0",
+    "prettier": "^3.3.2",
+    "sinon": "^18.0.0",
+    "sort-package-json": "^2.10.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "ts-lit-plugin": "^2.0.2",
+    "typescript-eslint": "^7.14.1",
+    "vite": "^5.3.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "customElements": "custom-elements.json"
+}

@@ -1,0 +1,1058 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/BlkButton.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BlkButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "propertyContext",
+              "default": "new BlockquoteControllerContextMeta(this, {\n      context: 'symbol-roles',\n      callback: v => {\n        this.roles = v;\n      },\n    })"
+            },
+            {
+              "kind": "field",
+              "name": "roles",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "roles",
+              "reflects": true
+            }
+          ],
+          "attributes": [
+            {
+              "name": "roles",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "roles"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "blk-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BlkButton",
+          "declaration": {
+            "name": "BlkButton",
+            "module": "src/BlkButton.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/BlkMaterial.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "![Lit](https://img.shields.io/badge/lit-3.0.0-blue.svg)\n\n## `<blk-material>`\n> Exercise to understand the use of tokens by Google web material.\n> Read [NOTES.md](./NOTES.md) to understand the proof of concept;\n\n[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/oscarmarina/blk-material)\n\n- https://material.io/blog/tone-based-surface-color-m3\n- https://m3.material.io/styles/color/the-color-system/tokens\n- https://m3.material.io/theme-builder#/dynamic\n\n## Installation\n\n```bash\nnpm i blk-material\n```\n\n## Usage\n\n```html\n<script type=\"module\">\n  import 'blk-material/blk-material.js';\n</script>\n\n<blk-material></blk-material>\n```\n\n## Local Demo with `vite`\n\n```bash\nnpm start\n```\n\nTo run a local development server that serves the basic demo located in demo/index.html",
+          "name": "BlkMaterial",
+          "slots": [
+            {
+              "description": "This element has a slot",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_svgTag",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_isNested",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "#onClick"
+            },
+            {
+              "kind": "method",
+              "name": "_sayHello",
+              "parameters": [
+                {
+                  "name": "heading",
+                  "description": "The heading to say \"Hello\" to",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Formats a greeting",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "heading",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The heading to say \"Hello\" to.",
+              "default": "'Hey there'",
+              "attribute": "heading"
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "The number of times the button has been clicked.",
+              "default": "5",
+              "attribute": "counter"
+            },
+            {
+              "kind": "field",
+              "name": "propertyContext",
+              "default": "new BlockquoteControllerContextMeta(this, {\n      context: 'symbol-roles',\n    })"
+            },
+            {
+              "kind": "field",
+              "name": "roles",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "roles",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "name": "counterchange",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Indicates when the count changes"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "description": "The heading to say \"Hello\" to.",
+              "default": "'Hey there'",
+              "fieldName": "heading"
+            },
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "description": "The number of times the button has been clicked.",
+              "default": "5",
+              "fieldName": "counter"
+            },
+            {
+              "name": "roles",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "roles"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "blk-material",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BlkMaterial",
+          "declaration": {
+            "name": "BlkMaterial",
+            "module": "src/BlkMaterial.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/BlkRipple.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "BlkRipple",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "parameters": [
+                {
+                  "name": "ev"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handlePointerenter"
+            },
+            {
+              "kind": "method",
+              "name": "handlePointerleave"
+            },
+            {
+              "kind": "method",
+              "name": "handleFocus",
+              "parameters": [
+                {
+                  "name": "ev",
+                  "description": "The focus event object.",
+                  "type": {
+                    "text": "FocusEvent"
+                  }
+                }
+              ],
+              "description": "Handles the focus event."
+            },
+            {
+              "kind": "method",
+              "name": "handleBlur"
+            },
+            {
+              "kind": "method",
+              "name": "handlePointerdown"
+            },
+            {
+              "kind": "method",
+              "name": "handlePointerup"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "hovered",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "hovered"
+            },
+            {
+              "kind": "field",
+              "name": "focused",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "focused"
+            },
+            {
+              "kind": "field",
+              "name": "pressed",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "pressed"
+            },
+            {
+              "kind": "field",
+              "name": "element"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "hovered",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "hovered"
+            },
+            {
+              "name": "focused",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "focused"
+            },
+            {
+              "name": "pressed",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "pressed"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "blk-ripple",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BlkRipple",
+          "declaration": {
+            "name": "BlkRipple",
+            "module": "src/BlkRipple.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-button-styles.css.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "styles",
+          "default": "css`:host {\n  --_block-spacing: var(--_spacing-relative-unit);\n  --_inline-spacing: var(--_spacing-relative-unit);\n  display: inline-flex;\n  box-sizing: border-box;\n  color: var(--_label-text-color);\n  font: var(--_label-text-type);\n  letter-spacing: var(--_label-text-tracking);\n  border-radius: var(--_container-shape);\n  cursor: pointer;\n}\n\n:host([hidden]),\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\n:host([disabled]) {\n  cursor: default;\n  pointer-events: none;\n}\n\nbutton {\n  -moz-osx-font-smoothing: inherit;\n  -webkit-font-smoothing: inherit;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  display: inherit;\n  align-items: center;\n  justify-content: center;\n  padding-block: calc(var(--_block-spacing) * 2 * 1rem);\n  padding-inline: calc(var(--_inline-spacing) * 2 * 1rem);\n  border: none;\n  border-radius: inherit;\n  outline: none;\n  cursor: inherit;\n  font: inherit;\n  background-color: inherit;\n  color: inherit;\n  letter-spacing: inherit;\n  overflow: visible;\n  text-align: inherit;\n  text-decoration: none;\n  text-shadow: inherit;\n  text-transform: inherit;\n  word-spacing: inherit;\n  vertical-align: middle;\n  inline-size: 100%;\n  position: relative;\n  z-index: 0;\n}\nbutton::before {\n  background-color: var(--_container-color);\n  border-radius: inherit;\n  content: \"\";\n  inset: 0;\n  position: absolute;\n  z-index: -1;\n}\nbutton::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\nbutton:hover {\n  color: var(--_hover-label-text-color);\n  cursor: pointer;\n}\nbutton:focus {\n  color: var(--_focus-label-text-color);\n}\nbutton:active {\n  color: var(--_pressed-label-text-color);\n  outline: none;\n}\nbutton:disabled {\n  color: var(--_disabled-label-text-color);\n  opacity: var(--_disabled-label-text-opacity);\n}\nbutton:disabled::before {\n  background-color: var(--_disabled-container-color);\n  opacity: var(--_disabled-container-opacity);\n}`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "styles",
+          "declaration": {
+            "name": "styles",
+            "module": "src/styles/blk-button-styles.css.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-button-tokens.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PREFIX",
+          "type": {
+            "text": "string"
+          },
+          "default": "'blk-button'"
+        },
+        {
+          "kind": "variable",
+          "name": "styleRoles"
+        },
+        {
+          "kind": "variable",
+          "name": "styleTokens",
+          "default": "`\n  ${cssStyleRule(`:host`, [tokens, themeVars])}\n  ${styleRoles}\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PREFIX",
+          "declaration": {
+            "name": "PREFIX",
+            "module": "src/styles/blk-button-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "styleRoles",
+          "declaration": {
+            "name": "styleRoles",
+            "module": "src/styles/blk-button-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "styleTokens",
+          "declaration": {
+            "name": "styleTokens",
+            "module": "src/styles/blk-button-tokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-material-styles.css.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "styles",
+          "default": "css`:host {\n  --_block-spacing: var(--_spacing-relative-unit);\n  --_inline-spacing: var(--_spacing-relative-unit);\n  display: block;\n  contain: content;\n  background-color: var(--_container-color);\n  color: var(--_label-text-color);\n  font: var(--_body-text-type);\n  letter-spacing: var(--_body-text-tracking);\n  padding: calc(var(--_block-spacing) * 2 * 1rem) calc(var(--_inline-spacing) * 2 * 1rem);\n  border-radius: var(--_container-shape);\n}\n\n@container style(--roles: surface) {\n  :host {\n    --kk-roles: surface;\n    background-color: pink;\n  }\n}\n:host(:hover) {\n  opacity: var(--_selected-hover-state-layer);\n}\n\n:host([hidden]),\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\n[role=heading] {\n  display: block;\n  font: var(--_header-headline-type);\n  padding-block-start: calc(var(--_spacing-unit) / var(--_header-headline-base-size) * 0.5 * 1em);\n  margin-block-end: calc(var(--_block-spacing) * 2 * 1rem);\n}\n[role=heading] + div {\n  display: flex;\n}\n\n.supporting-text {\n  font: var(--_header-supporting-text-type);\n  margin-block-end: calc(var(--_block-spacing) * 1 * 1rem);\n}\n\nfigure {\n  margin: 0;\n  margin-inline-end: calc(var(--_inline-spacing) * 1.5 * 1rem);\n  flex: none;\n  width: 6.25rem;\n  height: 6.25rem;\n}\nfigure svg {\n  fill: var(--_with-icon-icon-color);\n}\n\nblk-button {\n  margin-block: calc(var(--_block-spacing) * 3 * 1rem) calc(var(--_block-spacing) * 2 * 1rem);\n}\n\n::slotted(blk-material) {\n  margin-top: calc(var(--_block-spacing) * 1 * 1rem);\n}`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "styles",
+          "declaration": {
+            "name": "styles",
+            "module": "src/styles/blk-material-styles.css.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-material-tokens.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PREFIX",
+          "type": {
+            "text": "string"
+          },
+          "default": "'blk-material'"
+        },
+        {
+          "kind": "variable",
+          "name": "styleRoles"
+        },
+        {
+          "kind": "variable",
+          "name": "styleTokens",
+          "default": "`\n  ${cssStyleRule(`:host`, [tokens])}\n  ${styleRoles}\n`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PREFIX",
+          "declaration": {
+            "name": "PREFIX",
+            "module": "src/styles/blk-material-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "styleRoles",
+          "declaration": {
+            "name": "styleRoles",
+            "module": "src/styles/blk-material-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "styleTokens",
+          "declaration": {
+            "name": "styleTokens",
+            "module": "src/styles/blk-material-tokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-ripple-styles.css.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "styles",
+          "default": "css`:host,\n.focus-ring,\n.surface {\n  border-radius: inherit;\n  display: block;\n  position: absolute;\n  inset: 0;\n  pointer-events: none;\n}\n\n.focus-ring {\n  display: none;\n}\n\n.surface {\n  outline: none;\n  overflow: hidden;\n  -webkit-tap-highlight-color: transparent;\n}\n.surface::before, .surface::after {\n  position: absolute;\n  opacity: 0;\n  inset: inherit;\n  pointer-events: none;\n  content: \"\";\n}\n.surface::before {\n  background-color: var(--_hover-color);\n  transition: opacity 15ms linear, background-color 15ms linear;\n}\n.surface::after {\n  background: radial-gradient(closest-side, var(--_pressed-color) max(100% - 70px, 65%), transparent 100%);\n  transition: opacity 375ms linear;\n  transform-origin: center center;\n}\n.surface.hovered::before {\n  background-color: var(--_hover-color);\n  opacity: var(--_hover-opacity);\n}\n.surface.focused + .focus-ring {\n  display: block;\n  outline: 2px solid var(--_focus-color);\n  outline-offset: 2px;\n}\n.surface.pressed::after {\n  opacity: var(--_pressed-opacity);\n  transition-duration: 105ms;\n}`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "styles",
+          "declaration": {
+            "name": "styles",
+            "module": "src/styles/blk-ripple-styles.css.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/blk-ripple-tokens.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PREFIX",
+          "type": {
+            "text": "string"
+          },
+          "default": "'blk-ripple'"
+        },
+        {
+          "kind": "variable",
+          "name": "styleTokens",
+          "default": "`${cssStyleRule(`:host`, [tokens])}`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PREFIX",
+          "declaration": {
+            "name": "PREFIX",
+            "module": "src/styles/blk-ripple-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "styleTokens",
+          "declaration": {
+            "name": "styleTokens",
+            "module": "src/styles/blk-ripple-tokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-ref-alpha.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "refAlpha",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  alpha100: 0.08,\n  alpha200: 0.12,\n  alpha300: 0.16,\n  alpha400: 0.38,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "refAlpha",
+            "module": "src/tokens/blk-ref-alpha.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-ref-palette.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "refPalette",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  black: '#000',\n  error0: '#000',\n  error10: '#410e0b',\n  error100: '#fff',\n  error20: '#601410',\n  error30: '#8c1d18',\n  error40: '#b3261e',\n  error50: '#dc362e',\n  error60: '#e46962',\n  error70: '#ec928e',\n  error80: '#f2b8b5',\n  error90: '#f9dedc',\n  error95: '#fceeee',\n  error99: '#fffbf9',\n  'neutral-variant0': '#000',\n  'neutral-variant10': '#1d1a22',\n  'neutral-variant100': '#fff',\n  'neutral-variant20': '#322f37',\n  'neutral-variant30': '#49454f',\n  'neutral-variant40': '#605d66',\n  'neutral-variant50': '#79747e',\n  'neutral-variant60': '#938f99',\n  'neutral-variant70': '#aea9b4',\n  'neutral-variant80': '#cac4d0',\n  'neutral-variant90': '#e7e0ec',\n  'neutral-variant95': '#f5eefa',\n  'neutral-variant99': '#fffbfe',\n  neutral0: '#000',\n  neutral10: '#1d1b20',\n  neutral100: '#fff',\n  neutral12: '#211f26',\n  neutral17: '#2b2930',\n  neutral20: '#322f35',\n  neutral22: '#36343b',\n  neutral24: '#3b383e',\n  neutral30: '#48464c',\n  neutral4: '#0f0d13',\n  neutral40: '#605d64',\n  neutral50: '#79767d',\n  neutral6: '#141218',\n  neutral60: '#938f96',\n  neutral70: '#aea9b1',\n  neutral80: '#cac5cd',\n  neutral87: '#ded8e1',\n  neutral90: '#e6e0e9',\n  neutral92: '#ece6f0',\n  neutral94: '#f3edf7',\n  neutral95: '#f5eff7',\n  neutral96: '#f7f2fa',\n  neutral98: '#fef7ff',\n  neutral99: '#fffbff',\n  primary0: '#000',\n  primary10: '#21005d',\n  primary100: '#fff',\n  primary20: '#381e72',\n  primary30: '#4f378b',\n  primary40: '#6750a4',\n  primary50: '#7f67be',\n  primary60: '#9a82db',\n  primary70: '#b69df8',\n  primary80: '#d0bcff',\n  primary90: '#eaddff',\n  primary95: '#f6edff',\n  primary99: '#fffbfe',\n  secondary0: '#000',\n  secondary10: '#1d192b',\n  secondary100: '#fff',\n  secondary20: '#332d41',\n  secondary30: '#4a4458',\n  secondary40: '#625b71',\n  secondary50: '#7a7289',\n  secondary60: '#958da5',\n  secondary70: '#b0a7c0',\n  secondary80: '#ccc2dc',\n  secondary90: '#e8def8',\n  secondary95: '#f6edff',\n  secondary99: '#fffbfe',\n  tertiary0: '#000',\n  tertiary10: '#31111d',\n  tertiary100: '#fff',\n  tertiary20: '#492532',\n  tertiary30: '#633b48',\n  tertiary40: '#7d5260',\n  tertiary50: '#986977',\n  tertiary60: '#b58392',\n  tertiary70: '#d29dac',\n  tertiary80: '#efb8c8',\n  tertiary90: '#ffd8e4',\n  tertiary95: '#ffecf1',\n  tertiary99: '#fffbfa',\n  white: '#fff',\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "refPalette",
+            "module": "src/tokens/blk-ref-palette.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-ref-spacing.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/tokens/blk-ref-spacing.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-ref-typeface.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/tokens/blk-ref-typeface.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-sys-alpha.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "sysAlpha",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  refToken: reference,\n  namespace,\n  scheme: light,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "sysAlpha",
+            "module": "src/tokens/blk-sys-alpha.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-sys-color.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "dark",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  background: 'neutral6',\n  error: 'error80',\n  'error-container': 'error30',\n  'inverse-on-surface': 'neutral20',\n  'inverse-primary': 'primary40',\n  'inverse-surface': 'neutral90',\n  'on-background': 'neutral90',\n  'on-error': 'error20',\n  'on-error-container': 'error90',\n  'on-primary': 'primary20',\n  'on-primary-container': 'primary90',\n  'on-primary-fixed': 'primary10',\n  'on-primary-fixed-variant': 'primary30',\n  'on-secondary': 'secondary20',\n  'on-secondary-container': 'secondary90',\n  'on-secondary-fixed': 'secondary10',\n  'on-secondary-fixed-variant': 'secondary30',\n  'on-surface': 'neutral90',\n  'on-surface-variant': 'neutral-variant80',\n  'on-tertiary': 'tertiary20',\n  'on-tertiary-container': 'tertiary90',\n  'on-tertiary-fixed': 'tertiary10',\n  'on-tertiary-fixed-variant': 'tertiary30',\n  outline: 'neutral-variant60',\n  'outline-variant': 'neutral-variant30',\n  primary: 'primary80',\n  'primary-container': 'primary30',\n  'primary-fixed': 'primary90',\n  'primary-fixed-dim': 'primary80',\n  scrim: 'neutral0',\n  secondary: 'secondary80',\n  'secondary-container': 'secondary30',\n  'secondary-fixed': 'secondary90',\n  'secondary-fixed-dim': 'secondary80',\n  shadow: 'neutral0',\n  surface: 'neutral6',\n  'surface-bright': 'neutral24',\n  'surface-container': 'neutral12',\n  'surface-container-high': 'neutral17',\n  'surface-container-highest': 'neutral22',\n  'surface-container-low': 'neutral10',\n  'surface-container-lowest': 'neutral4',\n  'surface-dim': 'neutral6',\n  'surface-tint': 'primary80',\n  'surface-variant': 'neutral-variant30',\n  tertiary: 'tertiary80',\n  'tertiary-container': 'tertiary30',\n  'tertiary-fixed': 'tertiary90',\n  'tertiary-fixed-dim': 'tertiary80',\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "sysColor",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  refToken: reference,\n  namespace,\n  scheme: light,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "sysColor",
+            "module": "src/tokens/blk-sys-color.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "dark",
+          "declaration": {
+            "name": "dark",
+            "module": "src/tokens/blk-sys-color.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-sys-spacing.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "sysSpacing",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  refToken: reference,\n  namespace,\n  scheme: light,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "sysSpacing",
+            "module": "src/tokens/blk-sys-spacing.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-sys-typescale.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "sysTypescale",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  refToken: reference,\n  namespace,\n  scheme: light,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "sysTypescale",
+            "module": "src/tokens/blk-sys-typescale.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/blk-system.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "SYSTEM",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  sysColor,\n  sysTypescale,\n  sysAlpha,\n  sysSpacing,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SYSTEM",
+          "declaration": {
+            "name": "SYSTEM",
+            "module": "src/tokens/blk-system.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/dark-color-scheme.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "darkColorScheme"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "darkColorScheme",
+          "declaration": {
+            "name": "darkColorScheme",
+            "module": "src/tokens/dark-color-scheme.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "setDocumentStyles",
+          "declaration": {
+            "name": "setDocumentStyles",
+            "module": "src/tokens/dark-color-scheme.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/tokens/generate-tokens.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "ROLES",
+          "type": {
+            "text": "string"
+          },
+          "default": "'roles'"
+        },
+        {
+          "kind": "function",
+          "name": "concatenateStringsByKey",
+          "parameters": [
+            {
+              "name": "arr",
+              "description": "The array of objects to process.",
+              "type": {
+                "text": "Array<Object>"
+              }
+            }
+          ],
+          "description": "Returns an object with concatenated strings by key.",
+          "return": {
+            "type": {
+              "text": "Object"
+            }
+          }
+        },
+        {
+          "kind": "function",
+          "name": "cssStyleRule",
+          "parameters": [
+            {
+              "name": "selector",
+              "description": "The CSS selector.",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "values",
+              "description": "An array of CSS property-value pairs.",
+              "type": {
+                "text": "Array<string>"
+              }
+            }
+          ],
+          "description": "Create a single CSS style rule.",
+          "return": {
+            "type": {
+              "text": "string"
+            }
+          }
+        },
+        {
+          "kind": "function",
+          "name": "setVariables",
+          "parameters": [
+            {
+              "name": "data",
+              "description": "Data object.",
+              "type": {
+                "text": "Object"
+              }
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix for custom properties.",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "description": "Create custom CSS properties for a component.",
+          "return": {
+            "type": {
+              "text": "string"
+            }
+          }
+        },
+        {
+          "kind": "function",
+          "name": "setTokens",
+          "parameters": [
+            {
+              "name": "data",
+              "description": "Data object.",
+              "type": {
+                "text": "Object"
+              }
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix for custom properties.",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "description": "Create custom CSS properties for all tokens in a data.",
+          "return": {
+            "type": {
+              "text": "string"
+            }
+          }
+        },
+        {
+          "kind": "function",
+          "name": "setRoles",
+          "parameters": [
+            {
+              "name": "data",
+              "description": "Data object.",
+              "type": {
+                "text": "Object"
+              }
+            },
+            {
+              "name": "prefix",
+              "description": "Prefix for custom properties.",
+              "type": {
+                "text": "string"
+              }
+            }
+          ],
+          "description": "Create custom CSS properties for all roles.",
+          "return": {
+            "type": {
+              "text": "Object"
+            }
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ROLES",
+          "declaration": {
+            "name": "ROLES",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "concatenateStringsByKey",
+          "declaration": {
+            "name": "concatenateStringsByKey",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "cssStyleRule",
+          "declaration": {
+            "name": "cssStyleRule",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "setVariables",
+          "declaration": {
+            "name": "setVariables",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "setTokens",
+          "declaration": {
+            "name": "setTokens",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "setRoles",
+          "declaration": {
+            "name": "setRoles",
+            "module": "src/tokens/generate-tokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "define/blk-button.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "blk-button",
+          "declaration": {
+            "name": "BlkButton",
+            "module": "/src/BlkButton.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "define/blk-material.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "blk-material",
+          "declaration": {
+            "name": "BlkMaterial",
+            "module": "/src/BlkMaterial.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "define/blk-ripple.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "blk-ripple",
+          "declaration": {
+            "name": "BlkRipple",
+            "module": "/src/BlkRipple.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BlkMaterial",
+          "declaration": {
+            "name": "BlkMaterial",
+            "module": "./src/BlkMaterial.js"
+          }
+        }
+      ]
+    }
+  ]
+}

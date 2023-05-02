@@ -1,0 +1,59 @@
+:host,
+.focus-ring,
+.surface {
+  border-radius: inherit;
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.focus-ring {
+  display: none;
+}
+
+.surface {
+  outline: none;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after {
+    position: absolute;
+    opacity: 0;
+    inset: inherit;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::before {
+    background-color: var(--_hover-color);
+    transition: opacity 15ms linear, background-color 15ms linear;
+  }
+
+  &::after {
+    background: radial-gradient(closest-side, var(--_pressed-color) max(calc(100% - 70px), 65%), transparent 100%);
+    transition: opacity 375ms linear;
+    transform-origin: center center;
+  }
+
+  &.hovered::before {
+    background-color: var(--_hover-color);
+    opacity: var(--_hover-opacity);
+  }
+
+  &.focused {
+    + .focus-ring {
+      display: block;
+      outline: 2px solid var(--_focus-color);
+      outline-offset: 2px;
+
+      // opacity: var(--_focus-opacity);
+    }
+  }
+
+  &.pressed::after {
+    opacity: var(--_pressed-opacity);
+    transition-duration: 105ms;
+  }
+}

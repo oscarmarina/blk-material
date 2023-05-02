@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Demo - blk-material</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="blk-material" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --typeface-plain: 'IBM Plex Sans', serif;
+        --typeface-weight-regular: 400;
+        --typeface-line-height: 1.5rem;
+        --typeface-size: 1rem;
+        --typeface-tracking: 0.009rem;
+        --spacing-unit: calc(8 / 16 * 1rem);
+        --background: #fff;
+
+        /* surface roles */
+        --surface-dim: #ded8e1;
+        --surface: #fef7ff;
+        --surface-bright: #fef7ff;
+        /*  surface container roles */
+        --surface-container-lowest: #fff;
+        --surface-container-low: #f7f2fa;
+        --surface-container: #f3edf7;
+        --surface-container-high: #ece6f0;
+        --surface-container-highest: #e6e0e9;
+
+        --body-text-type: var(--typeface-weight-regular) var(--typeface-size) /
+          var(--typeface-line-height) var(--typeface-plain);
+
+        box-sizing: border-box;
+        font: var(--body-text-type);
+        background-color: var(--background);
+      }
+
+      :root[data-prefers-color-scheme='dark'] {
+        --background: #000;
+        /* surface roles */
+        --surface-dim: #141218;
+        --surface: #141218;
+        --surface-bright: #3b383e;
+        /*  surface container roles */
+        --surface-container-lowest: #0f0d13;
+        --surface-container-low: #1d1b20;
+        --surface-container: #211f26;
+        --surface-container-high: #2b2930;
+        --surface-container-highest: #36343b;
+      }
+
+      :root[data-prefers-color-scheme='dark'] label,
+      :root[data-prefers-color-scheme='dark'] .text,
+      :root[data-prefers-color-scheme='dark'] div[surface] {
+        color: #fef7ff;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      :not(:defined) {
+        visibility: hidden;
+      }
+
+      html,
+      body {
+        block-size: calc(100% + env(safe-area-inset-top) + env(safe-area-inset-bottom));
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .fieldset div {
+        display: flex;
+        align-items: center;
+      }
+
+      .fieldset div + div {
+        border-bottom: 1px solid var(--surface-container-high);
+        margin-bottom: 1rem;
+        padding-block-end: 0.5rem;
+      }
+
+      label {
+        display: inline-flex;
+        letter-spacing: var(--typeface-tracking);
+      }
+
+      input[type='checkbox'] {
+        width: 1rem;
+        height: 1rem;
+        margin-inline-end: 0.5rem;
+      }
+
+      .text {
+        text-transform: capitalize;
+      }
+
+      .fieldset + section {
+        margin-bottom: 2rem;
+      }
+
+      section:nth-child(1) {
+        background-color: var(--surface);
+        max-width: min(100%, calc(864 / 16 * 1rem));
+        margin: 2rem auto;
+        padding: 1em;
+      }
+
+      section:nth-child(2) {
+        width: 90%;
+        margin: auto;
+      }
+
+      section:nth-child(1)[surface~='dim'],
+      section:nth-child(2) [surface~='dim'] {
+        background-color: var(--surface-dim);
+      }
+
+      section:nth-child(1)[surface~='surface'],
+      section:nth-child(2) [surface~='surface'] {
+        background-color: var(--surface);
+      }
+
+      section:nth-child(1)[surface~='bright'],
+      section:nth-child(2) [surface~='bright'] {
+        background-color: var(--surface-bright);
+      }
+
+      section:nth-child(2) [surface] {
+        margin: 0 auto 1rem;
+        min-block-size: 40px;
+        padding: 1em;
+      }
+
+      section:nth-child(2) [surface~='lowest'] {
+        background-color: var(--surface-container-lowest);
+      }
+      section:nth-child(2) [surface~='low'] {
+        background-color: var(--surface-container-low);
+      }
+      section:nth-child(2) [surface~='container'] {
+        background-color: var(--surface-container);
+      }
+      section:nth-child(2) [surface~='high'] {
+        background-color: var(--surface-container-high);
+      }
+      section:nth-child(2) [surface~='highest'] {
+        background-color: var(--surface-container-highest);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="fieldset">
+          <div>
+            <input type="checkbox" id="tone" />
+            <label for="tone"> Tone-based Surfaces: </label>
+          </div>
+          <div>
+            <input type="checkbox" id="dark" />
+            <label for="dark"> prefers-color-scheme: dark </label>
+          </div>
+        </div>
+        <p class="text">surface</p>
+        <blk-material heading="Lit & Material 3"
+          >Lit adds just what you need to be happy and productive: reactivity, declarative templates
+          and a handful of thoughtful features to reduce boilerplate and make your job easier. Every
+          Lit feature is carefully designed with web platform evolution in mind.</blk-material
+        >
+      </section>
+      <section>
+        <div surface="dim">
+          <p>Dim</p>
+          <div surface="lowest">Surface lowest</div>
+          <div surface="low">Surface low</div>
+          <div surface="container">Surface container</div>
+          <div surface="high">Surface high</div>
+          <div surface="highest">Surface highest</div>
+        </div>
+        <hr />
+        <div surface="surface">
+          <p>Surface</p>
+          <div surface="lowest">Surface lowest</div>
+          <div surface="low">Surface low</div>
+          <div surface="container">Surface container</div>
+          <div surface="high">Surface high</div>
+          <div surface="highest">Surface highest</div>
+        </div>
+        <hr />
+        <div surface="bright">
+          <p>Bright</p>
+          <div surface="lowest">Surface lowest</div>
+          <div surface="low">Surface low</div>
+          <div surface="container">Surface container</div>
+          <div surface="high">Surface high</div>
+          <div surface="highest">Surface highest</div>
+        </div>
+      </section>
+    </main>
+    <script type="module">
+      // import { setDocumentStyles } from '@blockquote-web-components/blockquote-base-style-helpers';
+      import '../index.js';
+      import '../define/blk-material.js';
+
+      // Object.values(blkMaterialSurfaces).map(surface => setDocumentStyles(surface));
+
+      const sectionTone = document.querySelector('section');
+      const dataTone = document.querySelector('blk-material');
+      const textTone = document.querySelector('.text');
+      const ch = document.querySelector('#tone');
+      const dk = document.querySelector('#dark');
+
+      const getRandomSurface = (() => {
+        let lastValue = null;
+        let remainingStrings = [];
+
+        return strings => {
+          if (remainingStrings.length === 0) {
+            remainingStrings = strings.slice().sort(() => Math.random() - 0.5);
+          }
+          lastValue = remainingStrings.pop();
+          return lastValue;
+        };
+      })();
+
+      ch.addEventListener('change', ({ target }) => {
+        if (target.checked) {
+          const randomString = getRandomSurface(['dim', 'surface', 'bright']);
+          dataTone.setAttribute('surface-tone', randomString);
+          sectionTone.setAttribute('surface', randomString);
+          textTone.textContent = randomString;
+        } else {
+          dataTone.removeAttribute('surface-tone');
+          sectionTone.removeAttribute('surface');
+          textTone.textContent = `surface`;
+        }
+      });
+      dk.addEventListener('change', ({ target }) => {
+        if (target.checked) {
+          document.documentElement.setAttribute('data-prefers-color-scheme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-prefers-color-scheme');
+        }
+      });
+    </script>
+  </body>
+</html>
